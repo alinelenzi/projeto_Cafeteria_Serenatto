@@ -153,39 +153,39 @@
         <section class="banners banner-3 d-flex flex-column justify-content-center text-center">
         </section>
 
-        <section class="py-4 container">
+        <section class="py-4 container formulario">
             <div class="row">
                 <div class="col-10 col-xl-8 mx-auto">
                     <div class="border border-2 rounded p-3">
                         <h3 class="fw-bold p-3">Entre em contato!</h3>
-                        <form id="contato">
+                        <form action="" id="contato" data-formulario>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingNome placeholder="Nome">
-                                <label for="floatingNome">Nome</label>
+                                <input name="nome" type="text" class="form-control" id="floatingNome" placeholder="Nome" minlength="3" required/>
+                                <label for="floatingNome">Nome</label>                             
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                                <label for="floatingEmail">Email</label>
+                                <input name="email" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" minlength="4" required/>
+                                <label for="floatingEmail">Email</label>                        
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="floatingTelefone" placeholder="(27)90000-8000">
-                                <label for="floatingtelefone">Telefone</label>
+                                <input name="telefone"  type="number" class="form-control" id="floatingTelefone" placeholder="(27)90000-8000" required/>
+                                <label for="floatingtelefone">Telefone</label>     
                             </div>
                             <select class="form-select mb-3" aria-label="Default select example">
                                 <option selected>Preferência de contato:</option>
-                                <option value="1">WhatsApp</option>
-                                <option value="2">Email</option>
-                                <option value="3">Ligação</option>
+                                <option  name="preferencia" value="1">WhatsApp</option>
+                                <option  name="preferencia" value="2">Email</option>
+                                <option  name="preferencia" value="3">Ligação</option>
                             </select>
                             <label for="nivel-satisfacao" class="form-label">Nível de satisfação::</label>
-                            <input type="range" class="form-range input-range" id="customRange1">
+                            <input type="range" class="form-range input-range" id="customRange1"/>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Deseja receber novidades por email?
                                 </label>
                             </div>
-                            <button type="button" class="btn botao-padrao w-100 py-3 fw-bold mt-3">Enviar</button>
+                            <button value="Adicionar" type="submit" class="btn botao-padrao w-100 py-3 fw-bold mt-3" data-botao-enviar>Enviar</button>
                         </form>
                     </div>
                 </div>
